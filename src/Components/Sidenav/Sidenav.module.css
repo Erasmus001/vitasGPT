@@ -1,0 +1,208 @@
+@media (prefers-color-scheme: light) {
+  .sidenav {
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-main-sidebarNav-bgColor);
+    padding: 10px 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .favorites {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  :is(.favHd, .threadsFavHd) {
+    width: 100%;
+    padding: 7px 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  :is(.favHd, .threadsFavHd) h4 {
+    color: #686868FD;
+    font-size: 12px;
+    font-weight: 550;
+  }
+
+  .favoritesLists {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  :is(.favoritesLists, .threadsLists) {
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .favoritesLists::-webkit-scrollbar {
+    display: none;
+  }
+
+  .threadsLists::-webkit-scrollbar {
+    display: none;
+  }
+
+  .threads {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: calc(100vh - 120px);
+    overflow-y: hidden;
+    gap: 7px;
+  }
+
+  .delConvo {
+    width: 100%;
+  }
+
+  .delConvo button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 0;
+    background-color: var(--dark-delConvo-bgColor);
+    color: #DBD9D9;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .delConvo button:hover {
+    background-color: var(--dark-main-bgColor);
+  }
+}
+
+/* * Dark mode */
+@media (prefers-color-scheme: dark) {
+  .sidenav {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-sidebarNav-bgColor);
+    padding: 10px 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .favorites {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  :is(.favHd, .threadsFavHd) {
+    width: 100%;
+    padding: 7px 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  :is(.favHd, .threadsFavHd) h4 {
+    color: hsla(0, 0%, 69%, 0.71);
+    font-size: 12px;
+    font-weight: 550;
+  }
+
+  .favoritesLists {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  :is(.favoritesLists, .threadsLists) {
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .favoritesLists::-webkit-scrollbar {
+    display: none;
+  }
+
+  .threadsLists::-webkit-scrollbar {
+    display: none;
+  }
+
+  .threads {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: calc(100vh - 120px);
+    overflow-y: hidden;
+    gap: 7px;
+  }
+
+  .delConvo {
+    width: 100%;
+  }
+
+  .delConvo button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 0;
+    background-color: var(--dark-delConvo-bgColor);
+    color: #A8A8A8;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .delConvo button:hover {
+    background-color: var(--dark-main-bgColor);
+  }
+}

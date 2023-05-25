@@ -1,0 +1,65 @@
+:root {
+  /** Dark Palettes */
+  --dark-main-bgColor: #26292C;
+  --dark-main-textColor: #fff;
+  --dark-searchBox-bgColor: #343442;
+  --dark-delConvo-bgColor: #41414e;
+  
+  
+  /** Light Palettes */
+  --light-delConvo-bgColor: dimgray;
+  --light-main-bgColor: --dark-main-textColor;
+  --light-main-textColor: --dark-main-bgColor;
+  --light-searchBox-bgColor: #f7f7f7;
+  --light-delConvo-bgColor: ##41414e;
+  --light-delConvo-borderColor: #d0d1d8;
+  --light-chat-DetailColor: #949496;
+  --light-main-chat-bgColor: #fff;
+  /* --light-chat-bgColor: #fff; */
+  --light-main-sidebarNav-bgColor: whitesmoke;
+
+  /** Color Schemes */
+  --main-chat-bgColor: #343442;
+  --main-sidebarNav-bgColor: #1f2123;
+  --new-chatBtn-bgColor: #fbe79e;
+  --new-chatBtn-bgColorHvr: #DFC770;
+  --active-chat-bgColor: #343444;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--dark-main-bgColor);
+    background-color: var(--dark-main-textColor);
+  }
+  a:hover {
+    color: var(--dark-main-bgColor);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    color: var(--dark-main-textColor);
+    background-color: var(--dark-main-bgColor);
+  }
+  a:hover {
+    color: var(--dark-main-textColor);
+  } */
+
+  :root {
+    color: var(--dark-main-bgColor);
+    background-color: var(--dark-main-textColor);
+  }
+  a:hover {
+    color: var(--light-main-textColor);
+  }
+}
+
+
+a{
+  text-decoration: none;
+}
+
+body {
+  user-select: none;
+}

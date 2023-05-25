@@ -1,0 +1,95 @@
+@media (prefers-color-scheme: light) {
+  .chatCard {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 3px;
+    padding: 8px 5px;
+    transition: all 0.25s ease-in-out;
+    gap: 5px;
+    height: 60px;
+    text-decoration: none;
+  }
+
+  .hd {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+  }
+
+  .hd h4 {
+    color: #504F4F;
+    font-size: 14px;
+    font-weight: 550;
+  }
+
+  .chatCard p {
+    font-size: 12px;
+    color: var(--light-chat-DetailColor);
+  }
+
+  .chatCard:hover {
+    background-color: #C9C9C9;
+    cursor: pointer;
+  }
+
+  .chatCard:hover h4 {
+    color: black;
+  }
+
+  .chatCard:hover p {
+    color: black;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .chatCard {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 3px;
+    padding: 8px 5px;
+    transition: all 0.25s ease-in-out;
+    gap: 5px;
+    height: 60px;
+  }
+
+  .hd {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+  }
+
+  .hd h4 {
+    color: #8D8D8D;
+    font-size: 14px;
+    font-weight: 550;
+  }
+
+  .chatCard p {
+    font-size: 12px;
+    color: #808080C9;
+  }
+
+  .chatCard:hover {
+    background-color: var(--dark-delConvo-bgColor);
+    cursor: pointer;
+  }
+
+  .chatCard:hover h4 {
+    color: lightgray;
+  }
+
+  .chatCard:hover p {
+    color: lightgray;
+  }
+}

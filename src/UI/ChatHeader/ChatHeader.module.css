@@ -1,0 +1,30 @@
+@media (prefers-color-scheme: light) {
+  .chatHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color: var(--light-main-sidebarNav-bgColor);
+    padding: 0 30px;
+    color: black;
+    outline: 0;
+    border: 0;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .chatHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color: var(--dark-main-bgColor);
+    padding: 0 30px;
+    color: whitesmoke;
+    outline: 0;
+    border: 0;
+  }
+}

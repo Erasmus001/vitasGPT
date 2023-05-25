@@ -1,0 +1,290 @@
+@media (prefers-color-scheme: light) {
+  .authForm {
+    height: 100%;
+    background-color: #fff;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 50px 0 20px 0;
+  }
+
+  .form {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hd {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hd h3 {
+    font-size: 20px;
+    color: var(--light-main-textColor);
+  }
+
+  .inputGroup {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .input input {
+    width: 100%;
+    padding: 13px 10px;
+    font-size: 14px;
+    color: var();
+    border-radius: 6px;
+    border: 0;
+    background-color: var(--light-searchBox-bgColor);
+    color: var(--light-main-textColor);
+  }
+
+  .input input:focus {
+    outline: 2px solid lightgray;
+  }
+
+  .forgotPsd {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .forgotPsd a {
+    color: gray;
+    font-size: 14px;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .forgotPsd a:hover {
+    color: var(--light-main-textColor);
+  }
+
+  .button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button button {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: var(--new-chatBtn-bgColor);
+    border: 0;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+
+  .authButtons {
+    width: 100%;
+  }
+
+  .authButtonsDivider {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .authButtonsDivider span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .authButtonsDivider span hr {
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .authButtonsDivider span p {
+    color: gray;
+  }
+
+  .authButtons .button button {
+    padding: 13px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid lightgray;
+  }
+
+  .authLink span {
+    color: #555454;
+    font-size: 14px;
+  }
+
+  .authLink span a {
+    color: black;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .authLink span a:hover {
+    text-decoration: underline;
+    color: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .authForm {
+    height: 100%;
+    /* background-color: #fff; */
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 50px 0 20px 0;
+  }
+
+  .form {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hd {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hd h3 {
+    font-size: 20px;
+    color: white;
+  }
+
+  .inputGroup {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .input input {
+    width: 100%;
+    padding: 13px 10px;
+    font-size: 14px;
+    color: var();
+    border-radius: 6px;
+    border: 0;
+    background-color: var(--dark-searchBox-bgColor);
+    color: lightgray;
+  }
+
+  .input input:focus {
+    outline: 2px solid lightgray;
+  }
+
+  .forgotPsd {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .forgotPsd a {
+    color: gray;
+    font-size: 14px;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .forgotPsd a:hover {
+    color: var(--dark-main-textColor);
+  }
+
+  .button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button button {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: var(--new-chatBtn-bgColor);
+    border: 0;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+
+  .authButtons {
+    width: 100%;
+  }
+
+  .authButtonsDivider {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .authButtonsDivider span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .authButtonsDivider span hr {
+    width: 100%;
+    background-color: #5A5A5A;
+    border-radius: 10px;
+  }
+
+  .authButtonsDivider span p {
+    color: silver;
+  }
+
+  .authButtons .button button {
+    padding: 13px;
+    background-color: transparent;
+    color: lightgray;
+    border: 1px solid lightgray;
+  }
+
+  .authLink span {
+    color: gray;
+    font-size: 14px;
+  }
+
+  .authLink span a {
+    color: #D1CECE;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .authLink span a:hover {
+    text-decoration: underline;
+    color: white;
+  }
+}

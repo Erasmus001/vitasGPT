@@ -1,0 +1,48 @@
+@media (prefers-color-scheme: light) {
+  .searchBox {
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
+    font-size: 14px;
+    color: var(--light-main-textColor);
+    background-color: var(--light-searchBox-bgColor);
+    border-radius: 5px;
+    border: 0;
+    padding: 11px 10px;
+  }
+
+  .input::placeholder {
+    color: #858585;
+  }
+
+  .input:focus {
+    outline: none;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .searchBox {
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
+    font-size: 14px;
+    color: #BEBDBD;
+    background-color: var(--dark-searchBox-bgColor);
+    border-radius: 5px;
+    border: 0;
+    padding: 11px 10px;
+  }
+
+  .input::placeholder {
+    color: #858585;
+  }
+
+  .input:focus {
+    outline: none;
+  }
+}
