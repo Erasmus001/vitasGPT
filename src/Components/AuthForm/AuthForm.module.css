@@ -46,15 +46,15 @@
     width: 100%;
     padding: 13px 10px;
     font-size: 14px;
-    color: var();
     border-radius: 6px;
     border: 0;
     background-color: var(--light-searchBox-bgColor);
     color: var(--light-main-textColor);
+    border: 2px solid lightgray;
   }
 
   .input input:focus {
-    outline: 2px solid lightgray;
+    outline: 1px solid lightgray;
   }
 
   .forgotPsd {
@@ -189,7 +189,7 @@
 
   .input input {
     width: 100%;
-    padding: 13px 10px;
+    padding: 13px 15px;
     font-size: 14px;
     color: var();
     border-radius: 6px;
@@ -198,6 +198,9 @@
     color: lightgray;
   }
 
+        .input input:last-child() {
+          margin-bottom: 10px;
+        }
   .input input:focus {
     outline: 2px solid lightgray;
   }

@@ -1,14 +1,10 @@
 import './App.css';
-import AuthScreen from './Screens/AuthScreen/AuthScreen';
-import ChatScreen from './Screens/ChatScreen/ChatScreen';
-import WelcomeScreen from './Screens/WelcomeScreen/WelcomeScreen';
+import AppRouter from './Router/AppRouter';
 
-const App: React.FC = () => {
+const App: React.FC = (): JSX.Element => {
 	return (
 		<main className='mainApp'>
-			{/* <WelcomeScreen /> */}
-			{/* <ChatScreen /> */}
-			<AuthScreen />
+			<AppRouter />
 		</main>
 	);
 };

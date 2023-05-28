@@ -23,7 +23,9 @@
       {
         "target": "nsis",
         "arch": [
-          "x64"
+          "x64",
+          /* added x32*/
+          "x32"
         ]
       }
     ],
@@ -31,9 +33,9 @@
   },
   "nsis": {
     "oneClick": false,
-    "perMachine": false,
+    "perMachine": true,
     "allowToChangeInstallationDirectory": true,
-    "deleteAppDataOnUninstall": false
+    "deleteAppDataOnUninstall": true
   },
   "publish": {
     "provider": "generic",

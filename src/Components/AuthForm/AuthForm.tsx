@@ -1,37 +1,31 @@
-import { FormEvent, useRef } from 'react';
+import { FormEvent, useRef, useState } from 'react';
 import { AuthScreenProps } from '@/Types';
 import styles from './AuthForm.module.css';
 import { Logo } from '@/UI/Logo/Logo';
 import ChatGPTLogo from '../../assets/images/chatGPT.png';
+import { Link } from 'react-router-dom';
+import { useAuth } from '@/Context/AuthContext';
 
 const AuthForm = ({ type }: AuthScreenProps) => {
 	const emailRef = useRef<HTMLInputElement>(null);
 	const passwordRef = useRef<HTMLInputElement>(null);
 
+	const [isEmailLoading, setIsEmailLoading] = useState<Boolean>(false);
+	const [isGoogleLoading, setIsGoogleLoading] = useState<Boolean>(false);
+	const { EmailSignin, EmailSignup, GoogleSignin } = useAuth();
+
 	const handleSignin = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-
 		const email = emailRef.current?.value;
 		const password = passwordRef.current?.value;
-
-		console.log('====================================');
-		console.log({ email, password });
-		console.log('====================================');
-
-		alert(`Welcome ${email}`);
 	};
 
 	const handleSignup = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-
 		const email = emailRef.current?.value;
 		const password = passwordRef.current?.value;
 
-		console.log('====================================');
-		console.log({ email, password });
-		console.log('====================================');
-
-		alert(`Welcome ${email}`);
+		EmailSignup(email, password);
 	};
 
 	return (
@@ -70,12 +64,16 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 					</div>
 					{type === 'Signin' && (
 						<div className={styles.forgotPsd}>
-							<a href='#'>Forgot password?</a>
+							<Link to={''}>Forgot password?</Link>
 						</div>
 					)}
 					<div className={styles.button}>
-						<button type='submit'>
+						<button
+							type='submit'
+							disabled={!emailRef || (!passwordRef && true)}
+						>
 							{type === 'Signin' ? 'Signin' : 'Signup'}
+							{isEmailLoading && 'Signing in....'}
 						</button>
 					</div>
 				</form>
@@ -89,8 +87,10 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 						</span>
 					</div>
 					<div className={styles.button}>
-						<button type='button'>Continue with Google</button>
-						<button type='button'>Continue with Microsoft</button>
+						<button type='button' onClick={GoogleSignin}>
+							{isGoogleLoading ? 'Signing with Google' : 'Continue with Google'}
+						</button>
+						{/* <button type='button'>Continue with Microsoft</button> */}
 					</div>
 				</div>
 			</div>
@@ -98,11 +98,11 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 			<div className={styles.authLink}>
 				{type === 'Signin' ? (
 					<span>
-						Don't have an account? <a href='#'>Sign up</a>
+						Don't have an account? <Link to='#'>Sign up</Link>
 					</span>
 				) : (
 					<span>
-						Already have an account? <a href='#'>Sign in</a>
+						Already have an account? <Link to='#'>Sign in</Link>
 					</span>
 				)}
 			</div>

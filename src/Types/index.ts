@@ -23,3 +23,13 @@ export type AuthScreenProps = {
 	type: 'Signup' | 'Signin';
 	callback?: () => void;
 };
+
+
+export type AuthContextProp = {
+	children: React.ReactNode;
+};
+
+export type UserAuthInput = {
+	email: string;
+	password: string;
+};

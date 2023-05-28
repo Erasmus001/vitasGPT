@@ -1,16 +1,22 @@
-import { favThreadsProps } from '@/Types'
-import styles from './ChatCard.module.css'
+import { favThreadsProps } from '@/Types';
+import styles from './ChatCard.module.css';
+import { NavLink } from 'react-router-dom';
 
-const ChatCard = ({ threadTitle, threadDesc, timeStamp }: favThreadsProps) => {
+const ChatCard = ({
+	threadTitle,
+	threadDesc,
+	timeStamp,
+	id,
+}: favThreadsProps) => {
 	return (
-		<a href={'#'} className={styles.chatCard}>
+		<NavLink to={`/chat/${id}`} className={styles.chatCard}>
 			<div className={styles.hd}>
 				<h4>{threadTitle}</h4>
 				{/* <p>{timeStamp}</p> */}
 			</div>
 			<p>{threadDesc}</p>
-		</a>
+		</NavLink>
 	);
 };
 
-export default ChatCard
+export default ChatCard;

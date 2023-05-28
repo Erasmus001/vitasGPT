@@ -70,14 +70,14 @@
   }
 
   .hd h4 {
-    color: #8D8D8D;
-    font-size: 14px;
+    color: hsla(0, 0%, 45%, 81);
+      font-size: 13px;
     font-weight: 550;
   }
 
   .chatCard p {
     font-size: 12px;
-    color: #808080C9;
+    color: #686262C9;
   }
 
   .chatCard:hover {

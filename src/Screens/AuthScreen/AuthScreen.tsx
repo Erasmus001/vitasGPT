@@ -5,8 +5,8 @@ import SigninScreen from './SigninScreen/SigninScreen';
 import SignupScreen from './SignupScreen/SignupScreen';
 
 const AuthScreen = () => {
-	const { hideMainMenu } = useHideDefaultMenu();
-	hideMainMenu();
+	// const { hideMainMenu } = useHideDefaultMenu();
+	// hideMainMenu();
 
 	return (
 		<main className={styles.authScreen}>
