@@ -18,6 +18,8 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 		event.preventDefault();
 		const email = emailRef.current?.value;
 		const password = passwordRef.current?.value;
+
+		EmailSignin(email, password);
 	};
 
 	const handleSignup = (event: FormEvent<HTMLFormElement>) => {
@@ -98,11 +100,11 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 			<div className={styles.authLink}>
 				{type === 'Signin' ? (
 					<span>
-						Don't have an account? <Link to='#'>Sign up</Link>
+						Don't have an account? <Link to='/signin'>Sign up</Link>
 					</span>
 				) : (
 					<span>
-						Already have an account? <Link to='#'>Sign in</Link>
+						Already have an account? <Link to='/signup'>Sign in</Link>
 					</span>
 				)}
 			</div>

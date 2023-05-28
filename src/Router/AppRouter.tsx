@@ -24,8 +24,9 @@ const UnAuthenticatedRoutes: React.FC = (): JSX.Element => {
 	return (
 		<Router>
 			<Routes>
-				<Route path='/' element={<AuthScreen />} />
-				<Route path='/login' element={<AuthScreen />} />
+				<Route path='/' element={<AuthScreen type={'Signin'} />} />
+				<Route path='/signin' element={<AuthScreen type={'Signin'} />} />
+				<Route path='/signup' element={<AuthScreen type={'Signup'} />} />
 				{/* <Route path='/reset-password' element={<ChatScreen />} /> */}
 			</Routes>
 		</Router>

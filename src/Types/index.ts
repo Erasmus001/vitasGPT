@@ -20,7 +20,7 @@ export type AuthInputsType = {
 
 // Auth Screens Props..
 export type AuthScreenProps = {
-	type: 'Signup' | 'Signin';
+	type?: 'Signup' | 'Signin';
 	callback?: () => void;
 };
 

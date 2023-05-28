@@ -3,15 +3,16 @@ import styles from './AuthScreen.module.css';
 import AuthForm from '@/Components/AuthForm/AuthForm';
 import SigninScreen from './SigninScreen/SigninScreen';
 import SignupScreen from './SignupScreen/SignupScreen';
+import { AuthScreenProps } from '@/Types';
 
-const AuthScreen = () => {
+const AuthScreen = ({ type }: AuthScreenProps) => {
 	// const { hideMainMenu } = useHideDefaultMenu();
 	// hideMainMenu();
 
 	return (
 		<main className={styles.authScreen}>
 			{/* <SigninScreen /> */}
-			<SignupScreen />
+			<SignupScreen type={type} />
 		</main>
 	);
 };

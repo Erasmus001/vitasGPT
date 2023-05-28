@@ -24,7 +24,7 @@ const AuthContext = createContext({
 export const useAuth = () => useContext(AuthContext);
 
 const AuthContextProvider = ({ children }: AuthContextProp) => {
-	const [currentUser, setCurrentUser] = useState<firebase.User | null>(null);
+	const [currentUser, setCurrentUser] = useState<firebase.User | null>(true);
 	const provider = new GoogleAuthProvider();
 
 	useEffect(() => {
@@ -101,6 +101,7 @@ const AuthContextProvider = ({ children }: AuthContextProp) => {
 				console.log(email);
 				console.log(credential);
 				console.log('====================================');
+				alert(error);
 				// ...
 			});
 	};
