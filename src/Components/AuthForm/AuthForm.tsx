@@ -100,11 +100,11 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 			<div className={styles.authLink}>
 				{type === 'Signin' ? (
 					<span>
-						Don't have an account? <Link to='/signin'>Sign up</Link>
+						Don't have an account? <Link to='/signup'>Sign up</Link>
 					</span>
 				) : (
 					<span>
-						Already have an account? <Link to='/signup'>Sign in</Link>
+						Already have an account? <Link to='/signin'>Sign in</Link>
 					</span>
 				)}
 			</div>

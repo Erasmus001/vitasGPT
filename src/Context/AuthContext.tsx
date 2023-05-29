@@ -32,7 +32,6 @@ const AuthContextProvider = ({ children }: AuthContextProp) => {
 			if (user) {
 				// User is signed in, see docs for a list of available properties
 				// https://firebase.google.com/docs/reference/js/auth.user
-				console.log(user);
 				setCurrentUser(user);
 			} else {
 				setCurrentUser(null);
@@ -49,9 +48,8 @@ const AuthContextProvider = ({ children }: AuthContextProp) => {
 					const user = userCredential.user;
 					setCurrentUser(user);
 				} catch (error) {
-					console.log('====================================');
-					console.log(error);
-					console.log('====================================');
+					alert(error);
+					return;
 				}
 			}
 		);
