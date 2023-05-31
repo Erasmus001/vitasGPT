@@ -25,6 +25,7 @@ export const useAuth = () => useContext(AuthContext);
 
 const AuthContextProvider = ({ children }: AuthContextProp) => {
 	const [currentUser, setCurrentUser] = useState<firebase.User | null>(true);
+
 	const provider = new GoogleAuthProvider();
 
 	useEffect(() => {
@@ -121,6 +122,7 @@ const AuthContextProvider = ({ children }: AuthContextProp) => {
 		EmailSignup,
 		GoogleSignin,
 		Signout,
+		// showModal,
 	};
 
 	return (

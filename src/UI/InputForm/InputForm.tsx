@@ -1,16 +1,28 @@
-import React from 'react';
+import { FormEvent, useState } from 'react';
 import styles from './InputForm.module.css';
+import { generateResponse } from '@/openAi';
 
 const InputForm = () => {
+	const [promptVal, setPromptVal] = useState<string>('');
+
+	const handlePrompt = (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+
+		generateResponse(promptVal);
+		// alert(promptVal);
+	};
 	return (
-		<div className={styles.inputContainer}>
-			<textarea
+		<form className={styles.inputContainer} onSubmit={handlePrompt}>
+			<input
 				// type='text'
 				name='prompt'
-				placeholder='Ask me anything...'
+				placeholder='Hello, ask me anything...'
 				className={styles.input}
-			></textarea>
-		</div>
+				value={promptVal}
+				onChange={(e) => setPromptVal(e.target.value)}
+			></input>
+			{/* <button>Send</button> */}
+		</form>
 	);
 };
 

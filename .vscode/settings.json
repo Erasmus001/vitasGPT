@@ -10,11 +10,5 @@
       "url": "https://json.schemastore.org/electron-builder"
     }
   ],
-  "cSpell.words": [
-    "antd",
-    "Convo",
-    "Sidenav",
-    "Signin",
-    "signup"
-  ]
+  "cSpell.words": ["antd", "Convo", "Poweroff", "Sidenav", "Signin", "signup"]
 }

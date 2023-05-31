@@ -18,16 +18,18 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 		event.preventDefault();
 		const email = emailRef.current?.value;
 		const password = passwordRef.current?.value;
-
+		setIsEmailLoading((prev) => !prev);
 		EmailSignin(email, password);
+		setIsEmailLoading((prev) => !prev);
 	};
 
 	const handleSignup = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const email = emailRef.current?.value;
 		const password = passwordRef.current?.value;
-
+		setIsEmailLoading((prev) => !prev);
 		EmailSignup(email, password);
+		setIsEmailLoading((prev) => !prev);
 	};
 
 	return (
@@ -113,3 +115,5 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 };
 
 export default AuthForm;
+
+// AiOutlinePoweroff;
