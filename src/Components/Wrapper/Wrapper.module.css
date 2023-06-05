@@ -1,0 +1,27 @@
+@media (prefers-color-scheme: light) {
+  .wrapper {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    /* background-color: gainsboro; */
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .wrapper {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    /* background-color: gainsboro; */
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

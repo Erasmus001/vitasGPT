@@ -5,9 +5,9 @@ import { Logo } from '@/UI/Logo/Logo';
 import { useHideDefaultMenu } from '@/Hooks/useHideMenu';
 
 const WelcomeScreen: React.FC = () => {
-	const { hideMainMenu } = useHideDefaultMenu();
+	// const { hideMainMenu } = useHideDefaultMenu();
 
-	hideMainMenu();
+	// hideMainMenu();
 
 	return (
 		<main className={styles.main}>

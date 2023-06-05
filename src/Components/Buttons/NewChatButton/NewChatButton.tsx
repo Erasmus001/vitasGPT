@@ -6,7 +6,7 @@ import { useAuth } from '@/Context/AuthContext';
 
 const NewChatButton = () => {
 	const { currentUser } = useAuth();
-	console.log(currentUser);
+	// console.log(currentUser);
 
 	const createNewChat = async () => {
 		const doc = await addDoc(
@@ -17,6 +17,8 @@ const NewChatButton = () => {
 				createdAt: serverTimestamp(),
 			}
 		);
+
+		console.log(doc?._key?.path?.segments);
 	};
 
 	const navigate = useNavigate();

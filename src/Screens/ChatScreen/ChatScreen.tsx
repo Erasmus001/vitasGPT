@@ -10,7 +10,7 @@ const ChatScreen = () => {
 	// const { hideMainMenu } = useHideDefaultMenu();
 	// hideMainMenu();
 
-	const { isModalShowing } = useShowModal();
+	// const { isModalShowing } = useShowModal();
 
 	return (
 		<main className={styles.chatScreen}>

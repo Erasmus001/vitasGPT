@@ -14,7 +14,7 @@ const AuthenticatedRoutes: React.FC = (): JSX.Element => {
 			<Routes>
 				<Route path='/' element={<ChatScreen />} />
 				<Route path='/signout' element={<AuthScreen />} />
-				<Route path='/chat/id' element={<ChatScreen />} />
+				<Route path='/chat/:id' element={<ChatScreen />} />
 			</Routes>
 		</Router>
 	);
@@ -27,7 +27,7 @@ const UnAuthenticatedRoutes: React.FC = (): JSX.Element => {
 				<Route path='/' element={<AuthScreen type={'Signin'} />} />
 				<Route path='/signin' element={<AuthScreen type={'Signin'} />} />
 				<Route path='/signup' element={<AuthScreen type={'Signup'} />} />
-				{/* <Route path='/reset-password' element={<ChatScreen />} /> */}
+				{/* <Route path='/chat/:id' element={<ChatScreen />} /> */}
 			</Routes>
 		</Router>
 	);

@@ -24,7 +24,6 @@ export type AuthScreenProps = {
 	callback?: () => void;
 };
 
-
 export type AuthContextProp = {
 	children: React.ReactNode;
 };
@@ -32,4 +31,16 @@ export type AuthContextProp = {
 export type UserAuthInput = {
 	email: string;
 	password: string;
+};
+
+export type Chat = {
+	readonly id: number | string;
+	content: string;
+	createdAt: string;
+	role: 'User' | 'ChatGPT';
+	avatar: 'gpt' | 'user';
+};
+
+export type chat = {
+	chat: Chat;
 };

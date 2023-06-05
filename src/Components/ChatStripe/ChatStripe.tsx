@@ -1,15 +1,38 @@
-import { useState } from 'react';
-import { MDXProvider } from '@mdx-js/react';
-import ReactMarkdown from 'react-markdown';
+import { chat } from '@/Types';
+import Wrapper from '../Wrapper/Wrapper';
+import styles from './ChatStripe.module.css';
+import TypeWriter from '@/UI/TypeWriter/TypeWriter';
+import VitasGPT from '../../assets/images/chatGPT.png';
+import UserAvatar from '../../assets/node.svg';
 
-function ChatStripe() {
-	const [chatContent, setChatContent] = useState('');
-
+const ChatStripe = ({ chat }: chat) => {
 	return (
-		<MDXProvider>
-			<ReactMarkdown>{chatContent}</ReactMarkdown>
-		</MDXProvider>
+		<div
+			className={
+				chat.role === 'User' ? styles.chatStripeUser : styles.chatStripe
+			}
+		>
+			<Wrapper>
+				<div className={styles.content}>
+					<div className={styles.avatar}>
+						<img
+							src={chat.role === 'User' ? VitasGPT : VitasGPT}
+							alt=''
+							loading='lazy'
+							className={
+								chat.role === 'User' ? styles.userLogo : styles.gptLogo
+							}
+						/>
+					</div>
+					<div className={styles.text}>
+						<TypeWriter text={chat.content || 'This is the text'} />
+					</div>
+				</div>
+			</Wrapper>
+		</div>
 	);
-}
+
+	<p>{chat.content || 'This is the text'}</p>;
+};
 
 export default ChatStripe;

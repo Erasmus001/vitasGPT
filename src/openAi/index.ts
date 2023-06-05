@@ -1,3 +1,4 @@
+import { useAuth } from '@/Context/AuthContext';
 import { OpenAIApi, Configuration } from 'openai';
 
 const configuration = new Configuration({
@@ -5,20 +6,27 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-// const models = await openai.listModels();
 
-export const generateText = async (prompt: string) => {
-	const response = await openai.createCompletion({
+export const generateText = async (prompt: string, user?: string) => {
+	// const { currentUser } = useAuth();
+	// console.log(currentUser);
+
+	const response = await openai.createChatCompletion({
 		model: 'text-davinci-003',
 		max_tokens: 3000,
 		temperature: 0,
 		frequency_penalty: 0.5,
-		user: '',
+		// user,
 		presence_penalty: 0.2,
-		prompt,
+		messages: [
+			{
+				role: 'user',
+				content: prompt,
+			},
+		],
 	});
 
-	console.log(response?.data?.choices[0]?.text);
+	console.log(response?.data?.choices[0]?.message);
 
-	return response?.data?.choices[0]?.text;
+	return response?.data?.choices[0]?.message;
 };

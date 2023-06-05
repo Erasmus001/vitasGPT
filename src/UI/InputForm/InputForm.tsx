@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 import styles from './InputForm.module.css';
-import { generateResponse } from '@/openAi';
+import { generateText } from '@/openAi';
 
 const InputForm = () => {
 	const [promptVal, setPromptVal] = useState<string>('');
@@ -8,8 +8,7 @@ const InputForm = () => {
 	const handlePrompt = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
-		generateResponse(promptVal);
-		// alert(promptVal);
+		generateText(promptVal);
 	};
 	return (
 		<form className={styles.inputContainer} onSubmit={handlePrompt}>
