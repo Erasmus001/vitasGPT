@@ -6,6 +6,7 @@ import electron from 'vite-plugin-electron'
 import renderer from 'vite-plugin-electron-renderer'
 import pkg from './package.json'
 import tsConfigPaths from 'vite-tsconfig-paths'
+// import mdx from '@mdx-js/rollup'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
@@ -23,6 +24,7 @@ export default defineConfig(({ command }) => {
     },
     plugins: [
       react(),
+      // mdx({/* jsxImportSource: …, otherOptions… */}),
       tsConfigPaths(),
       electron([
         {

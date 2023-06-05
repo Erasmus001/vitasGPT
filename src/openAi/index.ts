@@ -1,22 +1,24 @@
-import axios from 'axios';
+import { OpenAIApi, Configuration } from 'openai';
 
-export const generateResponse = async (prompt: string) => {
-	const apiKey = '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';
-	const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions';
+const configuration = new Configuration({
+	apiKey: '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',
+});
 
-	const response = await axios.post(
-		apiUrl,
-		{
-			prompt: prompt,
-			max_tokens: 100,
-		},
-		{
-			headers: {
-				Authorization: `Bearer ${apiKey}`,
-				'Content-Type': 'application/json',
-			},
-		}
-	);
+const openai = new OpenAIApi(configuration);
+// const models = await openai.listModels();
 
-	return response.data.choices[0].text;
+export const generateText = async (prompt: string) => {
+	const response = await openai.createCompletion({
+		model: 'text-davinci-003',
+		max_tokens: 3000,
+		temperature: 0,
+		frequency_penalty: 0.5,
+		user: '',
+		presence_penalty: 0.2,
+		prompt,
+	});
+
+	console.log(response?.data?.choices[0]?.text);
+
+	return response?.data?.choices[0]?.text;
 };

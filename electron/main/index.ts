@@ -51,7 +51,7 @@ async function createWindow() {
 			preload,
 			nodeIntegration: true,
 			contextIsolation: false,
-
+			enableRemoteModule: true,
 			nativeWindowOpen: true,
 		},
 	});
