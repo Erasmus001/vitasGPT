@@ -16,20 +16,10 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 
 	const handleSignin = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		const email = emailRef.current?.value;
-		const password = passwordRef.current?.value;
-		setIsEmailLoading((prev) => !prev);
-		EmailSignin(email, password);
-		setIsEmailLoading((prev) => !prev);
 	};
 
 	const handleSignup = (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		const email = emailRef.current?.value;
-		const password = passwordRef.current?.value;
-		setIsEmailLoading((prev) => !prev);
-		EmailSignup(email, password);
-		setIsEmailLoading((prev) => !prev);
 	};
 
 	return (
@@ -68,7 +58,7 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 					</div>
 					{type === 'Signin' && (
 						<div className={styles.forgotPsd}>
-							<Link to={''}>Forgot password?</Link>
+							<Link to={'/resetPassword'}>Forgot password?</Link>
 						</div>
 					)}
 					<div className={styles.button}>
@@ -82,7 +72,7 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 					</div>
 				</form>
 
-				<div className={styles.authButtons}>
+				{/* <div className={styles.authButtons}>
 					<div className={styles.authButtonsDivider}>
 						<span>
 							<hr />
@@ -94,9 +84,9 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 						<button type='button' onClick={GoogleSignin}>
 							{isGoogleLoading ? 'Signing with Google' : 'Continue with Google'}
 						</button>
-						{/* <button type='button'>Continue with Microsoft</button> */}
+						<button type='button'>Continue with Microsoft</button>
 					</div>
-				</div>
+				</div> */}
 			</div>
 
 			<div className={styles.authLink}>

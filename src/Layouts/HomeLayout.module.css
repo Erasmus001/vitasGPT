@@ -1,0 +1,10 @@
+@media (prefers-color-scheme: dark) {
+  .main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+@media (prefers-color-scheme: light) {}
