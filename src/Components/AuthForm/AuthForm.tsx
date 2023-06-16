@@ -68,7 +68,7 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 					</div>
 					{type === 'Signin' && (
 						<div className={styles.forgotPsd}>
-							<Link to={''}>Forgot password?</Link>
+							<Link to={'/resetPassword'}>Forgot password?</Link>
 						</div>
 					)}
 					<div className={styles.button}>
@@ -82,7 +82,7 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 					</div>
 				</form>
 
-				<div className={styles.authButtons}>
+				{/* <div className={styles.authButtons}>
 					<div className={styles.authButtonsDivider}>
 						<span>
 							<hr />
@@ -94,9 +94,9 @@ const AuthForm = ({ type }: AuthScreenProps) => {
 						<button type='button' onClick={GoogleSignin}>
 							{isGoogleLoading ? 'Signing with Google' : 'Continue with Google'}
 						</button>
-						{/* <button type='button'>Continue with Microsoft</button> */}
+						<button type='button'>Continue with Microsoft</button>
 					</div>
-				</div>
+				</div> */}
 			</div>
 
 			<div className={styles.authLink}>

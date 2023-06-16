@@ -15,10 +15,10 @@ const AuthContext = createContext({
 	currentUser: null,
 	EmailSignin: (email: string | undefined, password: string | undefined) =>
 		Promise,
-	EmailSignup: (email: string | undefined, password: string | undefined) =>
-		Promise,
+	EmailSignup: (email: string, password: string) => Promise,
 	GoogleSignin: () => Promise,
 	Signout: () => Promise,
+	ResetPassword: () => Promise,
 });
 
 export const useAuth = () => useContext(AuthContext);
@@ -116,12 +116,15 @@ const AuthContextProvider = ({ children }: AuthContextProp) => {
 		});
 	};
 
+	const ResetPassword = async () => {};
+
 	const globalVal = {
 		currentUser,
 		EmailSignin,
 		EmailSignup,
 		GoogleSignin,
 		Signout,
+		ResetPassword,
 		// showModal,
 	};
 
