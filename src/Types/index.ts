@@ -33,14 +33,26 @@ export type UserAuthInput = {
 	password: string;
 };
 
-export type Chat = {
-	readonly id: number | string;
-	content: string;
-	createdAt: string;
-	role: 'User' | 'ChatGPT';
-	avatar: 'gpt' | 'user';
+// * Menu data type
+
+export type subCategoryProp = {
+	title: string;
+	numberOfSubItems: number;
+	bgColor: string;
 };
 
-export type chat = {
-	chat: Chat;
+
+export type menuDataProps = {
+	readonly id: number;
+	icon?: React.ReactElement;
+	title: string;
+	numberOfSubItems: number;
+	bgColor: string;
+	subCategory: subCategoryProp[]
 };
+
+export type menuProp = {
+	menu: menuDataProps;
+};
+
+

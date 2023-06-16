@@ -47,7 +47,7 @@
     color: var(--dark-main-textColor);
   }
 
-  p, div {
+  p, div, main {
     color: white;
   }
 

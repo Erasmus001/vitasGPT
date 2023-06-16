@@ -1,0 +1,17 @@
+@media (prefers-color-scheme: light) {
+}
+@media (prefers-color-scheme: dark) {
+	.menuScreen {
+		width: 100%;
+		/* background-color: red; */
+		height: 100%;
+		padding: 30px 30px;
+	}
+
+	.menuLists {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+	}
+}

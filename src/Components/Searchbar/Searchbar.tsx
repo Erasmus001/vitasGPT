@@ -39,21 +39,19 @@ const Searchbar = () => {
 	];
 
 	return (
-		// <form className={styles.inputForm}>
 		<AutoComplete
 			className={styles.searchInput}
 			allowClear
 			placeholder='Search'
 			options={searchOptions}
 			filterOption={true}
-			onSelect={(value) => {
-				console.log('selected', value);
-			}}
-			onSearch={(value) => {
-				console.log('searched text value', value);
-			}}
+			// onSelect={(value) => {
+			// 	console.log('selected', value);
+			// }}
+			// onSearch={(value) => {
+			// 	console.log('searched text value', value);
+			// }}
 		/>
-		// </form>
 	);
 };
 

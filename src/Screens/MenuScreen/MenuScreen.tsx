@@ -1,14 +1,40 @@
-import Searchbar from '@/Components/Searchbar/Searchbar';
-import React from 'react';
+import { MenuData } from '@/Data';
+import styles from './MenuScreen.module.css';
+import CategoryCard from '@/Components/CategoryCard/CategoryCard';
+import { useState } from 'react';
+import { menuDataProps, subCategoryProp } from '@/Types';
 
-type Props = {};
+const MenuScreen = () => {
+	const [selectedCategory, setSelectedCategory] = useState<subCategoryProp[]>(
+		[]
+	);
 
-const MenuScreen = (props: Props) => {
 	return (
-		<main>
-			<Searchbar />
+		<main className={styles.menuScreen}>
+			<div className={styles.menuLists}>
+				{MenuData.map((menu) => (
+					<CategoryCard menu={menu} key={menu.id} />
+				))}
+				{MenuData.map((menu) => (
+					<CategoryCard menu={menu} key={menu.id} />
+				)).reverse()}
+			</div>
+
+			<div>
+				<SelectedCategory />
+			</div>
 		</main>
 	);
 };
 
 export default MenuScreen;
+
+export const SelectedCategory = () => {
+	return (
+		<div>
+			{MenuData.map((category) => (
+				<div key={category.title}>{JSON.stringify(category)}</div>
+			))}
+		</div>
+	);
+};

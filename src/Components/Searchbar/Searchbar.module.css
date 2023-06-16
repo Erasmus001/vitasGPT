@@ -2,7 +2,8 @@
 }
 @media (prefers-color-scheme: dark) {
 	.searchInput {
-		width: 200px;
+		width: 300px;
 		color: white;
+		/* background-color: red; */
 	}
 }
