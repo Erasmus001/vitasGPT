@@ -1,6 +1,6 @@
 :root {
   /** Dark Palettes */
-  --dark-main-bgColor: #26292C;
+  --dark-main-bgColor: #060707;
   --dark-main-textColor: #fff;
   --dark-searchBox-bgColor: #343442;
   --dark-delConvo-bgColor: #41414e;
@@ -38,21 +38,27 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  /* :root {
+  :root {
     color: var(--dark-main-textColor);
     background-color: var(--dark-main-bgColor);
   }
+
   a:hover {
     color: var(--dark-main-textColor);
-  } */
+  }
 
-  :root {
+  p, div, main {
+    color: white;
+  }
+
+  /* :root {
     color: var(--dark-main-bgColor);
     background-color: var(--dark-main-textColor);
   }
+
   a:hover {
     color: var(--light-main-textColor);
-  }
+  } */
 }
 
 

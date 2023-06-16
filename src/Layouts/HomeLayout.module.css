@@ -1,0 +1,18 @@
+@media (prefers-color-scheme: dark) {
+  .main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .content {
+    /* background-color: dodgerblue; */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+  }
+}
+@media (prefers-color-scheme: light) {}
